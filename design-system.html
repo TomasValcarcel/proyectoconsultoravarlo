@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Design System - Varlo</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Rokkitt:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .ds-seccion {
+            margin-bottom: 40px;
+            text-align: left;
+        }
+ 
+        .ds-seccion h3 {
+            color: #0f172a;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+ 
+        /* Paleta */
+        .grid-colores {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+        }
+ 
+        .swatch {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+ 
+        .swatch .muestra {
+            height: 60px;
+        }
+ 
+        .swatch .info {
+            padding: 8px 10px;
+            background: #fff;
+        }
+ 
+        .swatch .nombre {
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: #0f172a;
+        }
+ 
+        .swatch .hex {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: #4a5568;
+        }
+ 
+        /* Tipografía */
+        .bloque-tipo {
+            background: #f8fafc;
+            border-left: 4px solid #1e3a8a;
+            border-radius: 6px;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+        }
+ 
+        .bloque-tipo .etiqueta {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #1e3a8a;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+ 
+        .muestra-rokkitt {
+            font-family: 'Rokkitt', serif;
+            font-size: 26px;
+            color: #0c2340;
+        }
+ 
+        .escala {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+ 
+        .escala span {
+            font-family: 'Rokkitt', serif;
+            color: #0c2340;
+        }
+ 
+        /* Componentes */
+        .fila-componentes {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+ 
+        .btn-demo-primario {
+            background-color: #d52b1e;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            border: 2px solid white;
+            font-size: 0.9rem;
+            cursor: default;
+        }
+ 
+        .btn-demo-secundario {
+            background-color: #0c2340;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            border: 2px solid #f2a900;
+            font-size: 0.9rem;
+            cursor: default;
+        }
+ 
+        .etiqueta-demo {
+            background-color: #f2a900;
+            color: #0c2340;
+            padding: 5px 14px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+ 
+        .card-demo {
+            background: #fff;
+            border-radius: 10px;
+            border-top: 4px solid #d52b1e;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            padding: 18px;
+            width: 200px;
+        }
+ 
+        .card-demo h4 {
+            color: #0c2340;
+            font-family: 'Rokkitt', serif;
+            margin-bottom: 6px;
+        }
+ 
+        .card-demo p {
+            font-size: 0.85rem;
+            margin: 0;
+        }
+ 
+        .header-demo {
+            background-color: #0c2340;
+            color: white;
+            padding: 12px 20px;
+            border-bottom: 4px solid #f2a900;
+            border-radius: 6px;
+            font-weight: 700;
+            width: 100%;
+            font-size: 0.9rem;
+        }
+ 
+        /* Mapa del sitio */
+        .arbol {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            line-height: 1.9;
+            white-space: pre;
+            overflow-x: auto;
+            color: #0f172a;
+        }
+ 
+        /* Tabla */
+        .tabla-sitios {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+ 
+        .tabla-sitios th {
+            background: #0f172a;
+            color: white;
+            text-align: left;
+            padding: 10px 14px;
+        }
+ 
+        .tabla-sitios td {
+            padding: 10px 14px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+ 
+        .tabla-sitios tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+ 
+        .bajada-ds {
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+ 
+        .tag-tech {
+            display: inline-block;
+            background: #1e3a8a;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+ 
+<header>
+    <h1>Consultora Varlo</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+ 
+<main>
+    <h2>Design System</h2>
+    <p class="bajada-ds">Guía visual del proyecto Línea 109 &amp; Terminal Liniers. Define la paleta de colores, tipografías y componentes reutilizados en todos los sitios.</p>
+ 
+    <!-- PALETA -->
+    <div class="ds-seccion">
+        <h3>🎨 Paleta de Colores</h3>
+        <div class="grid-colores">
+            <div class="swatch">
+                <div class="muestra" style="background:#d52b1e;"></div>
+                <div class="info">
+                    <div class="nombre">Rojo 109</div>
+                    <div class="hex">#d52b1e</div>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="muestra" style="background:#0c2340;"></div>
+                <div class="info">
+                    <div class="nombre">Azul Secundario</div>
+                    <div class="hex">#0c2340</div>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="muestra" style="background:#f2a900;"></div>
+                <div class="info">
+                    <div class="nombre">Oro Filete</div>
+                    <div class="hex">#f2a900</div>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="muestra" style="background:#f7fafc; border-bottom: 1px solid #e2e8f0;"></div>
+                <div class="info">
+                    <div class="nombre">Fondo Gris</div>
+                    <div class="hex">#f7fafc</div>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="muestra" style="background:#1a202c;"></div>
+                <div class="info">
+                    <div class="nombre">Texto Oscuro</div>
+                    <div class="hex">#1a202c</div>
+                </div>
+            </div>
+            <div class="swatch">
+                <div class="muestra" style="background:#2f855a;"></div>
+                <div class="info">
+                    <div class="nombre">Verde OK</div>
+                    <div class="hex">#2f855a</div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- TIPOGRAFÍA -->
+    <div class="ds-seccion">
+        <h3>✏️ Tipografía</h3>
+        <div class="bloque-tipo">
+            <div class="etiqueta">Títulos — Rokkitt (serif, 700)</div>
+            <div class="muestra-rokkitt">Terminal Liniers</div>
+            <div class="escala">
+                <span style="font-size:26px;">H1 26px</span>
+                <span style="font-size:20px;">H2 20px</span>
+                <span style="font-size:16px;">H3 16px</span>
+            </div>
+        </div>
+        <div class="bloque-tipo">
+            <div class="etiqueta">Texto — Inter (sans-serif, 400 / 600)</div>
+            <p style="font-family:'Inter',sans-serif; font-size:15px; margin:0;">Tu viaje por la ciudad, más rápido y seguro. Consultá el estado del servicio y nuestros recorridos en tiempo real.</p>
+            <div class="escala" style="font-family:'Inter',sans-serif;">
+                <span style="font-family:'Inter',sans-serif; font-size:15px; color:#1a202c;">Base 15px</span>
+                <span style="font-family:'Inter',sans-serif; font-size:12px; color:#4a5568;">Secundario 12px</span>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- COMPONENTES -->
+    <div class="ds-seccion">
+        <h3>🧩 Componentes</h3>
+        <div class="fila-componentes">
+            <span class="btn-demo-primario">Botón Primario</span>
+            <span class="btn-demo-secundario">Botón Secundario</span>
+            <span class="etiqueta-demo">Etiqueta</span>
+        </div>
+        <div class="fila-componentes">
+            <div class="card-demo">
+                <h4>Card de Servicio</h4>
+                <p>Borde superior rojo, sombra suave, esquinas redondeadas.</p>
+            </div>
+            <div class="card-demo" style="border-top-color:#f2a900;">
+                <h4>Card de Acceso</h4>
+                <p>Variante con acento dorado para accesos directos.</p>
+            </div>
+        </div>
+        <div class="header-demo">Header Principal — sticky, borde inferior dorado</div>
+    </div>
+ 
+    <!-- MAPA DEL SITIO -->
+    <div class="ds-seccion">
+        <h3>🗺️ Mapa del Sitio</h3>
+        <div class="arbol">Consultora Varlo
+├── Inicio
+├── Servicios
+├── Proyectos
+├── Contacto
+├── → Portafolio individual (proyecto1)
+├── → Design System (esta página)
+└── → Terminal Liniers (centro-transporte)
+      │
+      ├── Inicio
+      ├── Consulta de Viajes (JS + datos simulados)
+      ├── Servicios de la Terminal (+ Chatbot FAQ)
+      ├── Mapa de la Terminal (SVG)
+      └── → Línea 109
+            ├── Inicio
+            ├── Recorrido
+            ├── Ramales (A, B, C)
+            └── Contacto</div>
+ 
+        <table class="tabla-sitios">
+            <tr>
+                <th>Sitio</th>
+                <th>Páginas</th>
+                <th>Tecnologías</th>
+            </tr>
+            <tr>
+                <td>Consultora Varlo</td>
+                <td>4</td>
+                <td><span class="tag-tech">HTML</span><span class="tag-tech">CSS</span></td>
+            </tr>
+            <tr>
+                <td>Portafolio individual</td>
+                <td>3</td>
+                <td><span class="tag-tech">HTML</span><span class="tag-tech">CSS</span></td>
+            </tr>
+            <tr>
+                <td>Línea 109</td>
+                <td>4</td>
+                <td><span class="tag-tech">HTML</span><span class="tag-tech">CSS</span></td>
+            </tr>
+            <tr>
+                <td>Terminal Liniers</td>
+                <td>4</td>
+                <td><span class="tag-tech">HTML</span><span class="tag-tech">CSS</span><span class="tag-tech">JavaScript</span></td>
+            </tr>
+        </table>
+    </div>
+ 
+</main>
+ 
+<footer>
+    <p>© 2026 Consultora Varlo</p>
+    <p>Email: varloconsultora@varloagency.com</p>
+</footer>
+ 
+</body>
+</html>
+ 

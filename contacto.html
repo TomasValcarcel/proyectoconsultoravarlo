@@ -5,31 +5,127 @@
     <title>Contacto - Varlo</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .datos-contacto {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        .datos-contacto p {
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+        .formulario-contacto {
+            text-align: left;
+            margin-top: 10px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+            color: #333;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1e3a8a;
+        }
+        .btn-enviar {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+        }
+        .btn-enviar:hover {
+            background-color: #4cc9f0;
+            color: #0f172a;
+        }
+    </style>
 </head>
 <body>
-
+ 
 <header>
     <h1>Consultora Varlo</h1>
     <nav>
         <a href="index.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
         <a href="contacto.html">Contacto</a>
     </nav>
 </header>
-
+ 
 <main>
-    <p>¿Tenés un proyecto en mente? Nos encantaría escucharte. Ya sea que estés empezando de cero o busques escalar tu negocio actual, nuestro equipo está listo para ayudarte.</p>
     <h2>Contacto</h2>
-    <p>📍 Oficina: Villa del Parque, Buenos Aires.</p>
-    <p>📧 Consultas generales: varloconsultora@varloagency.com</p>
-    <p>📞 Tel: 11 3254 8281</p>
-    <p>⏰ Atención: Lunes a Viernes de 9:00 a 18:00 hs.</p>
+    <p>¿Tenés un proyecto en mente? Nos encantaría escucharte. Ya sea que estés empezando de cero o busques escalar tu negocio, nuestro equipo está listo para ayudarte.</p>
+ 
+    <div class="datos-contacto">
+        <p>📍 <strong>Oficina:</strong> Villa del Parque, Buenos Aires.</p>
+        <p>📧 <strong>Email:</strong> varloconsultora@varloagency.com</p>
+        <p>📞 <strong>Tel:</strong> 11 3254 8281</p>
+        <p>⏰ <strong>Atención:</strong> Lunes a Viernes de 9:00 a 18:00 hs.</p>
+    </div>
+ 
+    <div class="formulario-contacto">
+        <h2>Envianos un mensaje</h2>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="servicio">Servicio de interés</label>
+                <select id="servicio">
+                    <option value="">Seleccioná una opción...</option>
+                    <option>Desarrollo Web</option>
+                    <option>Marketing Estratégico</option>
+                    <option>SEO y Posicionamiento</option>
+                    <option>Identidad de Marca</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" rows="5" placeholder="Contanos sobre tu proyecto..."></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar mensaje</button>
+        </form>
+    </div>
 </main>
-
+ 
 <footer>
     <p>© 2026 Consultora Varlo</p>
     <p>Email: varloconsultora@varloagency.com</p>
 </footer>
-
+ 
 </body>
 </html>
+ 

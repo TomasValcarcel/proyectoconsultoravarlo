@@ -5,38 +5,82 @@
     <title>Servicios - Varlo</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        .card-servicio {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px;
+            border-top: 4px solid #1e3a8a;
+        }
+        .card-servicio .icono {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .card-servicio h3 {
+            color: #0f172a;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .card-servicio p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
-
+ 
 <header>
     <h1>Consultora Varlo</h1>
     <nav>
         <a href="index.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
         <a href="contacto.html">Contacto</a>
     </nav>
 </header>
-
+ 
 <main>
     <h2>Nuestros Servicios</h2>
-<p>
-Desarrollo Web Pro: Creamos sitios modernos, rápidos y optimizados para dispositivos móviles. Desde landing pages para lanzamientos hasta e-commerce complejos.
-</p>
-<p>
-Marketing Estratégico: Gestión de redes sociales, campañas de Google Ads y estrategias de contenido diseñadas para aumentar tu alcance orgánico y pago.
-</p>
-<p>
-SEO y Posicionamiento: Optimizamos tu estructura web para que los buscadores te encuentren primero. Si no estás en la primera página, no existís.
-</p>
-<p>
-Identidad de Marca: Diseño de logotipos, manuales de marca y estética visual que transmiten profesionalismo y confianza.
-</p>
+    <p>Ofrecemos soluciones digitales integrales para ayudarte a crecer. Desde el desarrollo hasta la estrategia, te acompañamos en cada etapa.</p>
+ 
+    <div class="grid-servicios">
+        <div class="card-servicio">
+            <span class="icono">💻</span>
+            <h3>Desarrollo Web</h3>
+            <p>Sitios modernos, rápidos y optimizados para dispositivos móviles. Desde landing pages hasta e-commerce complejos.</p>
+        </div>
+        <div class="card-servicio">
+            <span class="icono">📣</span>
+            <h3>Marketing Estratégico</h3>
+            <p>Gestión de redes sociales, campañas de Google Ads y estrategias de contenido para aumentar tu alcance orgánico y pago.</p>
+        </div>
+        <div class="card-servicio">
+            <span class="icono">🔍</span>
+            <h3>SEO y Posicionamiento</h3>
+            <p>Optimizamos tu estructura web para que los buscadores te encuentren primero. Si no estás en la primera página, no existís.</p>
+        </div>
+        <div class="card-servicio">
+            <span class="icono">🎨</span>
+            <h3>Identidad de Marca</h3>
+            <p>Diseño de logotipos, manuales de marca y estética visual que transmiten profesionalismo y confianza.</p>
+        </div>
+    </div>
 </main>
-
+ 
 <footer>
     <p>© 2026 Consultora Varlo</p>
     <p>Email: varloconsultora@varloagency.com</p>
 </footer>
-
+ 
 </body>
 </html>
+ 

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyectos - Varlo</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .grid-proyectos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            text-align: left;
+        }
+ 
+        .card-proyecto {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+ 
+        .card-proyecto:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+ 
+        .card-proyecto .franja {
+            background-color: #0f172a;
+            color: white;
+            padding: 20px;
+        }
+ 
+        .card-proyecto .franja h3 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            color: white;
+        }
+ 
+        .card-proyecto .franja .tipo {
+            font-size: 0.8rem;
+            color: #4cc9f0;
+            font-weight: 600;
+        }
+ 
+        .card-proyecto .cuerpo {
+            padding: 20px;
+        }
+ 
+        .card-proyecto .cuerpo p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+ 
+        .tag {
+            display: inline-block;
+            background: #1e3a8a;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 4px;
+            margin-bottom: 12px;
+        }
+ 
+        .btn-ver {
+            display: inline-block;
+            background-color: #1e3a8a;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+ 
+        .btn-ver:hover {
+            background-color: #4cc9f0;
+            color: #0f172a;
+        }
+    </style>
+</head>
+<body>
+ 
+<header>
+    <h1>Consultora Varlo</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+ 
+<main>
+    <h2>Nuestros Proyectos</h2>
+    <p>Desarrollos realizados por el equipo de Consultora Varlo. Hacé clic en cada proyecto para visitarlo.</p>
+ 
+    <div class="grid-proyectos">
+ 
+        <div class="card-proyecto">
+            <div class="franja">
+                <h3>🚌 Terminal Liniers</h3>
+                <span class="tipo">Centro de Transporte</span>
+            </div>
+            <div class="cuerpo">
+                <p>Portal web que centraliza la información de transporte de la zona de Liniers. Incluye consulta de viajes con JavaScript, mapa de la terminal y chatbot de servicios.</p>
+                <div>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <a href="https://tomasvalcarcel.github.io/centro-transporte/" target="_blank" class="btn-ver">Ver proyecto →</a>
+            </div>
+        </div>
+ 
+        <div class="card-proyecto">
+            <div class="franja">
+                <h3>🚍 Línea 109</h3>
+                <span class="tipo">Sitio de Transporte</span>
+            </div>
+            <div class="cuerpo">
+                <p>Sitio web oficial de la Línea 109, conectando Liniers con el Correo Central. Incluye recorrido, ramales A, B y C, y formulario de contacto.</p>
+                <div>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                </div>
+                <a href="https://tomasvalcarcel.github.io/Linea109/" target="_blank" class="btn-ver">Ver proyecto →</a>
+            </div>
+        </div>
+ 
+        <div class="card-proyecto">
+            <div class="franja">
+                <h3>👤 Portafolio Personal</h3>
+                <span class="tipo">Sitio Individual</span>
+            </div>
+            <div class="cuerpo">
+                <p>Portafolio personal de Tomas Valcarcel, estudiante de Marketing. Presenta su perfil, proyectos y datos de contacto.</p>
+                <div>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                </div>
+                <a href="https://tomasvalcarcel.github.io/proyecto1/" target="_blank" class="btn-ver">Ver proyecto →</a>
+            </div>
+        </div>
+ 
+        <div class="card-proyecto">
+            <div class="franja">
+                <h3>📐 Design System</h3>
+                <span class="tipo">Documento de Diseño</span>
+            </div>
+            <div class="cuerpo">
+                <p>Guía visual del proyecto que define la paleta de colores, tipografías y componentes reutilizados en todos los sitios del proyecto integrador.</p>
+                <div>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                </div>
+                <a href="design-system.html" class="btn-ver">Ver Design System →</a>
+            </div>
+        </div>
+ 
+    </div>
+</main>
+ 
+<footer>
+    <p>© 2026 Consultora Varlo</p>
+    <p>Email: varloconsultora@varloagency.com</p>
+</footer>
+ 
+</body>
+</html>
+ 
